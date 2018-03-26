@@ -1,0 +1,154 @@
+header {
+    overflow: hidden;
+}
+
+.diagram {
+    position: relative;
+}
+@keyframes animatedBackground {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+@keyframes animatedBackground1 {
+    0% { background-position: -100% 0; }
+    33% { background-position: 120% 0; }
+    100% { background-position: 120% 0; }
+}
+@keyframes animatedBackground2 {
+    0% { background-position: -100% 0; }
+    33% { background-position: -100% 0; }
+    66% { background-position: 120% 0; }
+    100% { background-position: 120% 0; }
+}
+@keyframes animatedBackground3 {
+    0% { background-position: -100% 0; }
+    66% { background-position: -100% 0; }
+    100% { background-position: 120% 0; }
+}
+@keyframes animatedColor {
+    0% { background-color: #efefef61; }
+    30% { background-color: #efefef61; }
+    35% { background-color: #efefef; }
+    40% { background-color: #efefef61; }
+}
+@keyframes animatedColor2 {
+    0% { background-color: #efefef61; }
+    60% { background-color: #efefef61; }
+    65% { background-color: #efefef; }
+    70% { background-color: #efefef61; }
+}
+@keyframes animatedColor3 {
+    0% { background-color: #efefef61; }
+    90% { background-color: #efefef61; }
+    95% { background-color: #efefef; }
+    100% { background-color: #efefef61; }
+}
+
+.globe-bg {
+    background: url(..//images/globe.png) no-repeat bottom right;
+    height: 732px;
+    position: absolute;
+    right: 0;
+    bottom: -31px;
+    width: 978px;
+    background-size: cover;
+}
+.globe-nw {
+    position: absolute;
+    right: -32px;
+    bottom: 0;
+    width: 1022px;
+    height: 670px;
+    transform: scale(0.95);
+}
+.globe-nw .line {
+    height: 2px;
+    background-color: #efefef61;
+    background: url(../images/pulse.png) #efefef61 0% 0% no-repeat;
+    position: absolute;
+}
+.globe-nw .line.a1 {
+    animation: animatedBackground1 3s linear infinite;
+}
+.globe-nw .line.a2 {
+    animation: animatedBackground2 3s linear infinite;
+}
+.globe-nw .line.a3 {
+    animation: animatedBackground3 3s linear infinite;
+}
+.globe-nw .circle {
+    border-radius: 200px;
+    background-color: #efefef61;
+    position: absolute;
+    animation: animatedColor 3s linear infinite;
+}
+.globe-nw .circle.second {
+    animation: animatedColor2 3s linear infinite;
+}
+.globe-nw .circle.trith {
+    animation: animatedColor3 3s linear infinite;
+}
+.diagram .line {
+    height: 2px;
+    background: url(../images/pulse.png) 0% 0% no-repeat;
+    position: absolute;
+    animation: animatedBackground 0.5s linear infinite;
+}
+@keyframes animatedBackgroundR {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+.diagram .line.reverse {
+    animation: animatedBackgroundR 0.5s linear infinite;
+}
+
+.tooltip {
+    position: absolute;
+    border-radius: 100px;
+    width: 15px;
+    height: 15px;
+}
+.tooltip span {
+    display: none; 
+    padding: 5px; 
+    width: 150px;
+    margin-left: -75px;
+    top: -38px;
+    left: 50%;
+}
+.tooltip:hover span {
+    box-sizing:border-box;
+    display:block;
+    background: #6EBCD3;
+    color:#fff;
+    padding:2px 4px;
+    position:absolute;
+    line-height:25px;
+    border-radius:5px;
+    font-size: 14px;
+    font-family: 'Cabin', sans-serif;
+    transition:.25s ease-in-out;
+
+}
+
+.tooltip span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:28px;
+    left:50%;
+    margin-left: -8px;
+    height:0;
+    width:0;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:8px solid #6EBCD3;
+    transition:.25s ease-in-out;
+}
+
+
+@media (max-width: 779px) {
+    .globe-bg {
+
+    }
+}

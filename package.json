@@ -1,0 +1,13 @@
+{
+    "name": "fapp",
+    "description": "Node js app",
+    "main": "app.js",
+    "version": "0.0.1",
+    "private": true,
+    "license": "ISC",
+    "dependencies": {
+        "express": "3.x",
+        "mongodb": "*",
+        "mongoose": "*"
+    }
+}
